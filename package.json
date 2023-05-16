@@ -1,7 +1,7 @@
 {
-  "name": "yru-vscode-extension",
-  "displayName": "Vscode Extension",
-  "description": "This is YRU's Vscode Extension.",
+  "name": "yru-extension",
+  "displayName": "YRU Extension",
+  "description": "This is YRU's Extension.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
@@ -19,17 +19,15 @@
       },
       {
         "command": "yru-extension.addCommaAfterText",
-        "title": "Add Comma After Text"
+        "title": "Add Comma After Text",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "yru-extension.replaceMybatisInsertValues",
+        "title": "Replace Mybatis Insert Values",
+        "when": "editorHasSelection"
       }
-    ],
-    "menus": {
-      "commandPalette": [
-        {
-          "command": "yru-extension.helloWorld",
-          "when": "editorHasSelection"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
